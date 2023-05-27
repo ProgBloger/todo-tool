@@ -10,7 +10,7 @@ function App() {
       <Header />
           <main>
             <div className={appStyle['main-container']}>
-              <label>TODO</label>
+              <h1>TODO</h1>
               <TodoInput />
               <TodoWidget />
             </div>

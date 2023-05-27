@@ -6,6 +6,13 @@
     padding: 1rem;
     z-index: 30;
     background-color: darkgreen;
+    
+    h1 {
+        letter-spacing: 0.3em;
+        font-size: 2em;
+        color: white;
+        font-family: Geneva, Helvetica, Verdana, Tahoma, sans-serif,  sans-serif;
+    }
   }
   
   @media (min-width: 768px) {
