@@ -1,11 +1,16 @@
-import logo from './logo.svg';
+import React from 'react';
+import Header from '../templates/Header';
 import appStyle from './App.module.scss';
+import Todo from '../templates/Todo';
 
 function App() {
   return (
-    <div className="App">
-      <div className={appStyle.circle}>some info</div>
-    </div>
+    <React.Fragment>
+      <Header />
+          <main>
+            <Todo />
+          </main>
+    </React.Fragment>
   );
 }
 
