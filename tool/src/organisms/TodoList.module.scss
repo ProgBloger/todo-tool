@@ -1,0 +1,13 @@
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        padding: 0em 1em;
+    }
+    
+    li:nth-child(even) {
+        border-bottom: 1px solid #ddd;
+    };
+}

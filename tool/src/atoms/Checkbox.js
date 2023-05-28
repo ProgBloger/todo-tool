@@ -9,12 +9,10 @@ const Checkbox = ({id}) => {
     }
 
     return(
-        <div className={styles.container}>
-          <div className={isActive ? styles.active : styles.inactive} onClick={clickHandler}>
+          <div className={`${isActive ? styles.active : styles.inactive} ${styles.round}`} onClick={clickHandler}>
             <input type="checkbox" id={id} />
             <label htmlFor="checkbox"></label>
           </div>
-        </div>
         )
 }
 

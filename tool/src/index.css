@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face{ 
+  font-family: 'PenFont';
+  src: url('./assets/A.Casual.Handwritten.Pen.Noncommercial.ttf') format('truetype');
+}

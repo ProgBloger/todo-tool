@@ -1,0 +1,25 @@
+$pictureColorMagenta: #c539fa;
+$pictureColorCyan:#1d8c9d;
+$fontSize: 1em;
+
+.container {
+    padding-top: 0.5em;
+    padding-bottom: 0em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    font: $fontSize PenFont, sans-serif ;
+    color: gray;
+    button {
+        font-family: PenFont;
+        background-color: white;
+        border: none;
+        font-size: $fontSize;
+        color: gray;
+    }
+    button:hover {
+        color: black;
+    }
+}

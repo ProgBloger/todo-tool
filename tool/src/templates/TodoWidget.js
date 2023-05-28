@@ -1,13 +1,14 @@
 import React from "react";
 import TodoControlFooter from "../organisms/TodoControlFooter";
 import TodoList from "../organisms/TodoList";
+import Card from "../atoms/Card";
 
 const TodoWidget = () => {
     return (
-        <React.Fragment>
-            <TodoList />
-            <TodoControlFooter />
-        </React.Fragment>
+            <Card>
+                <TodoList />
+                <TodoControlFooter />
+            </Card>
     );
 }
 

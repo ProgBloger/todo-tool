@@ -1,0 +1,18 @@
+$pictureColorMagenta: #c539fa;
+$pictureColorCyan:#1d8c9d;
+
+.note {
+    font: 2em PenFont, sans-serif ;
+    border: none;
+    background: transparent;
+    background-color: white;
+    caret-color: $pictureColorMagenta;
+}
+
+.note:focus {
+    outline: none;
+}
+
+.container {
+    vertical-align: middle;
+}

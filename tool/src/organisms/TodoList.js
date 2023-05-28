@@ -1,5 +1,6 @@
 import React from "react";
 import TodoItem from "../molecules/TodoItem";
+import styles from "./TodoList.module.scss";
 
 const TodoList = () => {
 
@@ -10,7 +11,7 @@ const TodoList = () => {
     console.log(content());
 
     return (
-        <ul>
+        <ul className={styles.list}>
             {content()}
         </ul>
     )
