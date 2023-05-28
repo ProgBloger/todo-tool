@@ -1,9 +1,19 @@
 .container {
+    div {
+        vertical-align: middle;
+    }
+
+    position:relative;
+    height: 100%;
     
     button {
         float: right;
-        vertical-align: middle;
+        position: absolute;
+        top: 20%;
+        right: 3%;
+        transform: translate(-50%);
     }
+
     span {
         font: 2em PenFont, sans-serif ;
         margin: 0em 0.5em;
