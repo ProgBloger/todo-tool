@@ -5,8 +5,17 @@ const initialState = {
     itemsToShow:[],
     itemsTotal: 0,
     itemsTotalActive: 0,
-    filterState: 'FILTER_ALL',
+    // true - completed
+    // false - active
+    // null - all
+    filter: null,
 };
+
+const filterProcessor = (itemsList, filterParam) => {
+    if(filterParam == null)
+        return itemsList;
+    return itemsList.filter(item => item.completed == filterParam)
+}
 
 const todoListSlice = createSlice({
     name: 'todoList',
@@ -25,6 +34,7 @@ const todoListSlice = createSlice({
             state.items.push(newItem);
 
             // update the show list based on active filter
+            state.itemsToShow = filterProcessor(state.items, state.filter);
         },
         removeItem(state, action) {
             const id = action.payload.id;
@@ -39,6 +49,7 @@ const todoListSlice = createSlice({
             state.items = state.items.filter(item => item.id !== id);
 
             // update the show list based on active filter
+            state.itemsToShow = filterProcessor(state.items, state.filter);
         },
         changeItemState(state, action) {
             // find item from the state list
@@ -55,8 +66,12 @@ const todoListSlice = createSlice({
             }
             
             // update the show list based on active filter
+            state.itemsToShow = filterProcessor(state.items, state.filter);
         },
-        fiterItems(state, action) {},
+        fiterItems(state, action) {
+            state.filter = action.payload
+            state.itemsToShow = filterProcessor(state.items, state.filter);
+        },
         clearCompleted(state, action){},
     },
 });

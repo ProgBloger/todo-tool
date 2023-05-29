@@ -5,7 +5,7 @@ import styles from "./TodoList.module.scss";
 import { useSelector } from "react-redux";
 
 const TodoList = () => {
-    const todoItems = useSelector((state) => state.todoList.items);
+    const todoItems = useSelector((state) => state.todoList.itemsToShow);
 
     const content = () => {
         return todoItems.map(item => 
