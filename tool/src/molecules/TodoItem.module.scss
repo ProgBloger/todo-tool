@@ -1,10 +1,15 @@
+.container:hover button{
+    visibility: visible;
+}
+
 .container {
-    div {
-        vertical-align: middle;
-    }
 
     position:relative;
     height: 100%;
+
+    div {
+        vertical-align: middle;
+    }
     
     button {
         float: right;
@@ -12,6 +17,7 @@
         top: 20%;
         right: 3%;
         transform: translate(-50%);
+        visibility: hidden;
     }
 
     span {

@@ -14,6 +14,10 @@ const TodoItem = ({id, text, completed}) => {
             completed:value}));
     }
 
+    const deleteButtonHandler = () => {
+        dispatchAction(todoActions.removeItem({id:id}));
+    }
+
     return (
         <li className={style.container}>
                 <Checkbox 
@@ -23,7 +27,7 @@ const TodoItem = ({id, text, completed}) => {
                     enabled={true}
                      />
                 <span>{text}</span>
-                <CloseButton />
+                <CloseButton clickCallback={deleteButtonHandler} />
         </li>
     )
 }

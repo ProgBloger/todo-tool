@@ -23,17 +23,38 @@ const todoListSlice = createSlice({
             }
 
             state.items.push(newItem);
+
+            // update the show list based on active filter
         },
-        removeItem(state, action) {},
+        removeItem(state, action) {
+            const id = action.payload.id;
+            const existingItem = state.items.find(item => item.id === id);
+            
+            // updating totals on item being removed
+            state.itemsTotal--;
+            if(!existingItem.completed) {
+                state.itemsTotalActive--;
+            }
+
+            state.items = state.items.filter(item => item.id !== id);
+
+            // update the show list based on active filter
+        },
         changeItemState(state, action) {
             // find item from the state list
-            let newItemState = action.payload;
-            var foundItem = state.items.find((item) => item.id === newItemState.id);
+            const newItemState = action.payload;
+            const foundItem = state.items.find((item) => item.id === newItemState.id);
             
             // set item's state from the payload
             foundItem.completed = newItemState.completed;
             
-            // call the filter function
+            if(foundItem.completed) {
+                state.itemsTotalActive--;
+            } else {
+                state.itemsTotalActive++;
+            }
+            
+            // update the show list based on active filter
         },
         fiterItems(state, action) {},
         clearCompleted(state, action){},
