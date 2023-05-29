@@ -22,4 +22,8 @@ $fontSize: 1em;
     button:hover {
         color: black;
     }
+
+    .activeFilter{
+        color: $pictureColorCyan;
+    }
 }

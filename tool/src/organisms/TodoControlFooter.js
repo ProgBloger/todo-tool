@@ -8,27 +8,43 @@ const TodoControlFooter = () => {
     const FILTER_ACTIVE = false;
     const FILTER_COMPLETED = true;
 
-    const totalActive = useSelector((state) => state.todoList.itemsTotalActive);
+    const footerState = useSelector((state) => {
+        return {
+        totalActive: state.todoList.itemsTotalActive,
+        activeFilter: state.todoList.filter,
+    }});
+
     const dispatchAction = useDispatch();
 
     const setFilterHandler = (filterParam) => {
         dispatchAction(todoActions.fiterItems(filterParam));
     }
 
+    console.log(footerState.activeFilter === FILTER_ALL);
+
     return (
         <React.Fragment>
             <div className={style.container}>
                 <span className={style.left}>
-                    <label>{totalActive} items left</label>
+                    <label>{footerState.totalActive} items left</label>
                 </span>
                 <span className={style.center}>
                     <button 
+                        className={footerState.activeFilter === FILTER_ALL 
+                                    ? style.activeFilter
+                                    : undefined}
                         onClick={() => setFilterHandler(FILTER_ALL)}
                         >All</button>
                     <button
+                        className={footerState.activeFilter == FILTER_ACTIVE 
+                            ? style.activeFilter
+                            : undefined}
                         onClick={() => setFilterHandler(FILTER_ACTIVE)}
                         >Active</button>
                     <button
+                        className={footerState.activeFilter === FILTER_COMPLETED 
+                            ? style.activeFilter
+                            : undefined}
                         onClick={() => setFilterHandler(FILTER_COMPLETED)}
                         >Completed</button>
                 </span>
