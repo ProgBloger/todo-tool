@@ -2,10 +2,19 @@ import React from "react";
 import TodoItem from "../molecules/TodoItem";
 import styles from "./TodoList.module.scss";
 
+import { useSelector } from "react-redux";
+
 const TodoList = () => {
+    const todoItems = useSelector((state) => state.todoList.items);
 
     const content = () => {
-        return [{id:1},{id:2},{id:3},{id:4},{id:5}].map(item => <TodoItem key={item.id}/>)
+        return todoItems.map(item => 
+        <TodoItem 
+            key={item.id}
+            id={item.id}
+            text={item.text}
+            completed={item.completed}
+            />)
     }
     
     console.log(content());
