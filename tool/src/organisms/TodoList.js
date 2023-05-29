@@ -17,8 +17,6 @@ const TodoList = () => {
             />)
     }
     
-    console.log(content());
-
     return (
         <ul className={styles.list}>
             {content()}

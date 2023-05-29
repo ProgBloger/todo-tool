@@ -20,7 +20,9 @@ const TodoControlFooter = () => {
         dispatchAction(todoActions.fiterItems(filterParam));
     }
 
-    console.log(footerState.activeFilter === FILTER_ALL);
+    const clearCompletedHandler = () => {
+        dispatchAction(todoActions.clearCompleted());
+    }
 
     return (
         <React.Fragment>
@@ -49,7 +51,7 @@ const TodoControlFooter = () => {
                         >Completed</button>
                 </span>
                 <span className={style.right}>
-                    <button>Clear Completed</button>
+                    <button onClick={clearCompletedHandler}>Clear Completed</button>
                 </span>
             </div>
         </React.Fragment>

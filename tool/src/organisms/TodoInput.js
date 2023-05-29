@@ -9,22 +9,29 @@ const TodoInput = () => {
     const ref = React.createRef();
     const keyDownHandler = (e) => {
         if(e.keyCode == 13) {
-            console.log(ref.current.value);
-
-            dispatchAction(
-                todoActions.addItem({
-                    text:ref.current.value
-                })
-            );
-        
-            ref.current.value = '';
+            addItemHandler()
         }
+    };
+
+    const addItemHandler = () => {
+        dispatchAction(
+            todoActions.addItem({
+                text:ref.current.value
+            })
+        );
+    
+        ref.current.value = '';
     };
 
     return (
         <React.Fragment>
             <div className={styles.container}>
-                <Checkbox id={0} enabled={false} />
+                <Checkbox 
+                    id={-1} 
+                    setActive={false} 
+                    enableStyles={false}
+                    valueCallback={addItemHandler}
+                    />
                 <input 
                     className={styles.note} 
                     type="text" 

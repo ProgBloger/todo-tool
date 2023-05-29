@@ -1,19 +1,17 @@
 import { useState } from 'react';
 import styles from './Checkbox.module.scss'
 
-const Checkbox = ({id, setActive, enabled, valueCallback}) => {
+const Checkbox = ({id, setActive, enableStyles, valueCallback}) => {
 
     const clickHandler = () => {
-        if(enabled) {
             if(valueCallback) {
                 valueCallback(!setActive);
             }
-        }
     }
 
     return(
           <div 
-            className={`${setActive 
+            className={`${enableStyles && setActive 
                             ? styles.active 
                             : styles.inactive} ${styles.round}`} 
             onClick={clickHandler}>

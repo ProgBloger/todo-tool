@@ -24,7 +24,7 @@ const TodoItem = ({id, text, completed}) => {
                     id={id}
                     valueCallback={checkboxHandler}
                     setActive={completed}
-                    enabled={true}
+                    enableStyles={true}
                      />
                 <span>{text}</span>
                 <CloseButton clickCallback={deleteButtonHandler} />

@@ -24,7 +24,7 @@ const todoListSlice = createSlice({
         addItem(state, action) {
             state.itemsTotal = state.itemsTotal + 1;
             state.itemsTotalActive = state.itemsTotalActive + 1;
-            console.log(action);
+            
             const newItem = {
                 id: state.itemsTotal,
                 text: action.payload.text,
@@ -72,7 +72,18 @@ const todoListSlice = createSlice({
             state.filter = action.payload
             state.itemsToShow = filterProcessor(state.items, state.filter);
         },
-        clearCompleted(state, action){},
+
+        clearCompleted(state){
+            state.items = state.items.filter(item => item.completed === false);
+            state.itemsTota = state.items.length;
+
+            // if filter is set to active - no filtering required
+            if(state.filter === false)
+                return;
+
+            // update the show list based on active filter
+            state.itemsToShow = filterProcessor(state.items, state.filter);
+        },
     },
 });
 
