@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="inactive round"
+    onClick={[Function]}
+  >
+    <input
+      id={-1}
+      type="checkbox"
+    />
+    <label
+      htmlFor="checkbox"
+    />
+  </div>
+  <input
+    className="note"
+    onKeyDown={[Function]}
+    placeholder="If you want God to laugh tell him your plans"
+    type="text"
+  />
+</div>
+`;

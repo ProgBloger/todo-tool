@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<li
+  className="container"
+>
+  <div
+    className="inactive round"
+    onClick={[Function]}
+  >
+    <input
+      type="checkbox"
+    />
+    <label
+      htmlFor="checkbox"
+    />
+  </div>
+  <span />
+  <button
+    className="close"
+    onClick={[Function]}
+  />
+</li>
+`;

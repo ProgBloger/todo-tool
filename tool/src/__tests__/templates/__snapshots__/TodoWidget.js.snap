@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<div
+  className="card"
+>
+  <ul
+    className="list"
+  />
+  <div
+    className="container"
+  >
+    <span
+      className="left"
+    >
+      <label>
+        0
+         items left
+      </label>
+    </span>
+    <span
+      className="center"
+    >
+      <button
+        className="activeFilter"
+        onClick={[Function]}
+      >
+        All
+      </button>
+      <button
+        onClick={[Function]}
+      >
+        Active
+      </button>
+      <button
+        onClick={[Function]}
+      >
+        Completed
+      </button>
+    </span>
+    <span
+      className="right"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Clear Completed
+      </button>
+    </span>
+  </div>
+</div>
+`;
