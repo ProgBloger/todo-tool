@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/todo-tool/static/css/main.1cf8b6a3.css",
-    "main.js": "/todo-tool/static/js/main.d26e3c72.js",
+    "main.js": "/todo-tool/static/js/main.558b1eeb.js",
     "static/js/787.c740408f.chunk.js": "/todo-tool/static/js/787.c740408f.chunk.js",
     "static/media/Mountain.jpg": "/todo-tool/static/media/Mountain.d21dc19c55e1b96756ab.jpg",
     "static/media/A.Casual.Handwritten.Pen.Noncommercial.ttf": "/todo-tool/static/media/A.Casual.Handwritten.Pen.Noncommercial.c75c6c6516b867e6f89d.ttf",
     "index.html": "/todo-tool/index.html",
     "main.1cf8b6a3.css.map": "/todo-tool/static/css/main.1cf8b6a3.css.map",
-    "main.d26e3c72.js.map": "/todo-tool/static/js/main.d26e3c72.js.map",
+    "main.558b1eeb.js.map": "/todo-tool/static/js/main.558b1eeb.js.map",
     "787.c740408f.chunk.js.map": "/todo-tool/static/js/787.c740408f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1cf8b6a3.css",
-    "static/js/main.d26e3c72.js"
+    "static/js/main.558b1eeb.js"
   ]
 }
