@@ -45,8 +45,6 @@ test('if enableStyles and setActive className is set to active', () => {
   const setActiveInput = true;
   const callback = jest.fn();
   const expectedClassValue = "active";
-
-  // Act
   const {container} = render(
       <Checkbox 
         id={0}
@@ -56,6 +54,8 @@ test('if enableStyles and setActive className is set to active', () => {
          />
       );
 
+
+  // Act
   var checkBox = container.querySelector('div');
 
   // Assert

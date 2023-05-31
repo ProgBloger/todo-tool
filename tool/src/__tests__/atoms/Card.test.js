@@ -32,4 +32,3 @@ test('renders children', () => {
     const linkElement = screen.getByText(new RegExp(innerText, "i"));
     expect(linkElement).toBeInTheDocument();
   });
-  

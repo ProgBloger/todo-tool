@@ -22,14 +22,15 @@ const todoListSlice = createSlice({
     initialState,
     reducers: {
         addItem(state, action) {
-            state.itemsTotal = state.itemsTotal + 1;
-            state.itemsTotalActive = state.itemsTotalActive + 1;
             
             const newItem = {
-                id: state.itemsTotal,
+                id: 'id' + (new Date()).getTime(),
                 text: action.payload.text,
                 completed: false,
             }
+
+            state.itemsTotal = state.itemsTotal + 1;
+            state.itemsTotalActive = state.itemsTotalActive + 1;
 
             state.items.push(newItem);
 
@@ -72,7 +73,6 @@ const todoListSlice = createSlice({
             state.filter = action.payload
             state.itemsToShow = filterProcessor(state.items, state.filter);
         },
-
         clearCompleted(state){
             state.items = state.items.filter(item => item.completed === false);
             state.itemsTota = state.items.length;

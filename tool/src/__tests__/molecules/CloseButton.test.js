@@ -19,14 +19,13 @@ it('renders', () => {
 test('if button is clicked callback is called', () => {
     // Arrange
     const callback = jest.fn();
-  
-    // Act
     const {container} = render(
         <CloseButton 
           clickCallback={callback}
            />
         );
   
+    // Act
     fireEvent.click(container.querySelector('button'));
   
     // Assert
